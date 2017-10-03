@@ -20,16 +20,16 @@ i=0
 earthPoint = Point(0,0,0)
 resultList = []
 # for line in fileinput.input():
-with open('C:\\Users\\pkk8199\\Downloads\\hygdata_v3.csv') as db:
-    for line in db:
-        if i < 1:
-            i+=1
-            continue
-        rec = line.split(",")
-        starPoint = Point(rec[17], rec[18], rec[19])
-        distFromEarth = starPoint.distance(earthPoint)
-        # print(rec[0], distFromEarth, starPoint)
-        resultList.append((starPoint,distFromEarth))
+# with open('C:\\Users\\pkk8199\\Downloads\\hygdata_v3.csv') as db:
+for line in fileinput.input():
+    if i < 1:
+        i+=1
+        continue
+    rec = line.split(",")
+    starPoint = Point(rec[17], rec[18], rec[19])
+    distFromEarth = starPoint.distance(earthPoint)
+    # print(rec[0], distFromEarth, starPoint)
+    resultList.append((starPoint,distFromEarth))
 
 print(*sorted(resultList, key=lambda x : x[1])[:int(sys.argv[1])], sep="\n")
 
