@@ -35,7 +35,7 @@ print(*sorted(resultList, key=lambda x : x[1])[:int(sys.argv[1])], sep="\n")
 
 
 
-# findstars service : Data can be loaded into Spark and can be queried
+# findstars service : Data can be loaded into Spark RDD and can be queried
 #                      on real time by passing arbitary point
 
 

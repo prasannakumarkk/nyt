@@ -1,0 +1,4 @@
+1) Kafka, a distributed messaging service will be used for collection service, which is also fault tolerant and responsive.
+When a broker goes down since the data are replicated across cluster and service wont get impacted
+2) There will be two subscriber for the topic, one will be to load the raw data into HDFS and other will be used for Streaming Analytics
+3) Query service can query data Spark in memory based on whatever requirement in place.
